@@ -5,8 +5,8 @@
     // "width": 1280, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
-    "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor", "network", "cpu", "memory", "temperature", "pulseaudio", "tray"],
+    "modules-right": ["idle_inhibitor"],
+    "modules-center": ["pulseaudio", "network", "cpu", "memory", "temperature", "clock", "tray"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -34,7 +34,7 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 16,
         "spacing": 10
     },
     "clock": {
@@ -82,17 +82,5 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-    },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }
