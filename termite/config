@@ -1,0 +1,14 @@
+[options]
+allow_bold = true
+audible_bell = false
+bold_is_bright = true
+font = Monospace 9
+urgent_on_bell = false
+cursor_blink = on
+
+
+
+[colors]
+background = #2d2929
+foreground_bold = #fdff00
+foreground = #ffffff
