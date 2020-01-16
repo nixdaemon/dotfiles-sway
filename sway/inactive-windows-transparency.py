@@ -20,7 +20,7 @@ for window in ipc.get_tree():
 def on_window_focus(ipc, focused):
     global prev_focused
     if focused.container.id != prev_focused.id: # https://github.com/swaywm/sway/issues/2859
-        focused.container.command('opacity 0.9')
+        focused.container.command('opacity 0.97')
         prev_focused.command('opacity ' + transparency_val)
         prev_focused = focused.container
 

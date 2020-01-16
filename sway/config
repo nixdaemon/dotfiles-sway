@@ -21,15 +21,14 @@ set $menu exec termite --name=launcher -e "bash -c 'compgen -c | grep -v fzf | s
 for_window [app_id="^launcher$"] floating enable, border none, opacity 0.8
 ### Gaps and looks
 
-font pango:Noto Sans Mono CJK KR 10
+font pango: Nerd Font 14
 gaps top 40
 gaps right 30
 gaps bottom 40
 gaps left 30
-gaps inner 10
+gaps inner 50
 
-for_window [title=".*"] border pixel 0
-
+for_window [title=".*"] floating enable, border pixel 0
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -50,15 +49,9 @@ bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' \
-#               resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w timeout 60 'swaylock -f -c $HOME/.config/swaylock/config'
 #
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+# This will lock your screen after 300 seconds of inactivity.
 
 ### Input configuration
 #
@@ -230,13 +223,11 @@ bindsym $mod+r mode "resize
 # Screenshots
 # 
 # Regional screenshots
-    bindsym --release Shift+Print exec grim -g "$(slurp)" snippet.png | notify-send -t 5000 'Capturing region'
+    bindsym --release Shift+Print exec grim -g "$(slurp)" snippet.png
 #Autostart
     exec notify-send -t 5000 'Mako started' | exec mako
     exec python $HOME/.config/sway/inactive-windows-transparency.py
     exec waybar
-    exec nm-applet
-#Shortcuts
-    bindsym $mod+Shift+b exec firefox 
-include /etc/sway/config.d/*
+    exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+    exec termite -e $HOME/.config/sway/start_wifi.sh
 
