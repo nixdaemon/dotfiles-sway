@@ -3,7 +3,7 @@ scripts, configs, and dotfiles for sway, zsh, etc.
 
 ![img](https://raw.githubusercontent.com/pufchek/dotfiles-sway/master/snippet.png)
 
-These dotfiles are what for use in my own sway environment
+These dotfiles are what I use in my own sway environment
 
 
 **Applications**
