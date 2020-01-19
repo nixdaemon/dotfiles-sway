@@ -20,10 +20,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-export XDG_CURRENT_DESKTOP='Unity slack'
-export _JAVA_AWT_WM_NONREPARENTING='1'
-export QT_WAYLAND_DISABLE_WINDOWDECORATION='1'
-export QT_QPA_PLATFORMTHEME="qt5ct"
-/usr/bin/pfetch
+/usr/bin/ufetch
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

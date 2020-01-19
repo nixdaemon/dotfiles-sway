@@ -37,9 +37,11 @@ window#waybar.chromium {
    transition: none;
 }
 
-#workspaces button {;
+#workspaces button {
+    color: #ffffff;
     transition: none;
     background: transparent;
+    padding: 0 3px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -50,6 +52,7 @@ window#waybar.chromium {
 
 #workspaces button.focused {
     border-top: 2px solid rgb(253, 255, 0);
+    color: #ffffff;
 }
 
 #workspaces button.urgent {
@@ -68,12 +71,12 @@ window#waybar.chromium {
 
 #clock, #tray {
     border-top: 2px solid rgb(0, 1, 12);
-    margin: 0px;
+    margin-left: 5px;
 }
-	
-label:focus {
- 
+/*	
+label:focus { 
 }
+*/
 
 #cpu, #memory, #temperature {
     border-top: 2px solid rgb(208, 135, 255);
